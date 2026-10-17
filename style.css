@@ -1,0 +1,144 @@
+
+/* ---------- Global styles ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background-color: #f3f4f6;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+}
+
+/* ---------- Main layout ---------- */
+
+.simulation {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    color: #111827;
+}
+
+.description {
+    margin: 0 0 20px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* ---------- Canvas ---------- */
+
+#canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+/* ---------- Controls ---------- */
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+button {
+    padding: 9px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background-color: #f9fafb;
+    color: #1f2937;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+button:hover {
+    background-color: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+button:active {
+    background-color: #d1d5db;
+}
+
+button:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Primary actions */
+
+#play {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+
+#play:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* ---------- Simulation information ---------- */
+
+#gen,
+#speed {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+#gen {
+    margin-left: auto;
+}
+
+/* ---------- Responsive layout ---------- */
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .controls {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    button {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    #gen {
+        margin-left: 0;
+    }
+}
